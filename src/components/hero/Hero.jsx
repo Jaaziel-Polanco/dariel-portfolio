@@ -4,13 +4,13 @@ import {
   AiFillGithub,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import resumePDF from "../../assets/Resume.pdf";
-import img from "../../assets/dariel.PNG";
-import analyst from "../../assets/analyst.png";
+import resumePDF from "/assets/Resume.pdf";
+import img from "/public/assets/dariel.PNG";
+import analyst from "/assets/analyst.png";
 
 
 const Hero = () => {
