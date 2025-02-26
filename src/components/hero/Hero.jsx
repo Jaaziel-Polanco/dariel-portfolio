@@ -9,7 +9,7 @@ import { FiDownload } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import resumePDF from "/assets/Resume.pdf";
-import img from "/public/assets/dariel.PNG";
+import img from "/assets/dariel.PNG?url";
 import analyst from "/assets/analyst.png";
 
 

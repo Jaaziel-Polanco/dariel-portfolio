@@ -5,7 +5,7 @@ import { RxExternalLink } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 const WorkCard = () => {
-  const reversedData = [...data].reverse();
+  const reversedData = [...data];
 
   return (
     <>

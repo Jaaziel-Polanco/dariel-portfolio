@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanem/react-nprogress": "^5.0.55",
     "aos": "^3.0.0-beta.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^6.8.1",
+    "react-simple-typewriter": "^5.0.1",
     "react-spinners": "^0.13.8",
     "react-type-animation": "^2.1.2",
     "react-typewriter-effect": "^1.1.0",
@@ -28,7 +30,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
+    "tailwindcss": "^3.4.17",
     "vite": "^6.0.11",
     "vite-plugin-static-copy": "^2.2.0"
   }

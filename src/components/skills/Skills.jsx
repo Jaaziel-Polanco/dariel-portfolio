@@ -1,98 +1,62 @@
 import React from "react";
-import ProgressBar from "../../chip/ProgressBar";
-import SkillBox from "../../chip/SkillBox";
-
 import { IoLogoPython } from "react-icons/io";
-import { FaMicrosoft, FaDatabase } from "react-icons/fa";
-import { SiPowerbi, SiMysql, SiPostgresql } from "react-icons/si";
+import { FaMicrosoft, FaDatabase, FaLightbulb, FaUsers, FaComments, FaClock, FaHandshake, FaBrain } from "react-icons/fa";
+import { SiPowerbi } from "react-icons/si";
+import { TbDatabaseCog } from "react-icons/tb";
+import { MdOutlineQueryStats } from "react-icons/md";
 
-const Skills = ({ darkMode }) => {
+const skills = [
+  { name: "Python", icon: <IoLogoPython /> },
+  { name: "Excel", icon: <FaMicrosoft /> },
+  { name: "Power BI", icon: <SiPowerbi /> },
+  { name: "SQL Server", icon: <FaDatabase /> },
+  { name: "Power Query", icon: <MdOutlineQueryStats /> },
+  { name: "Big Data", icon: <TbDatabaseCog /> },
+];
+
+const softSkills = [
+  { name: "Problem Solving", icon: <FaLightbulb /> },
+  { name: "Teamwork", icon: <FaUsers /> },
+  { name: "Communication", icon: <FaComments /> },
+  { name: "Critical Thinking", icon: <FaBrain /> },
+  { name: "Time Management", icon: <FaClock /> },
+  { name: "Collaboration", icon: <FaHandshake /> },
+];
+
+
+const Skills = () => {
   return (
-    <div id="skills">
-      <div className="container m-auto mt-16">
-        {/* Heading */}
-        <div data-aos="fade-up" className="relative mb-5">
-          <h3 className="text-3xl font-black text-gray-400 sm:text-2xl">
-            My Skills
-          </h3>
-          <span className="h-[1.1px] right-0 absolute w-[90%] bg-gray-300 block"></span>
-        </div>
-        {/* Content */}
-        <div className="flex md:flex-col">
-          {/* Left Section */}
-          <div className="left flex-1 w-full">
-            <p
-              data-aos="fade-up"
-              className="text-gray-700 font-medium w-[100%]"
-            >
-              Here are my skills.
-            </p>
-            <div
-              data-aos="zoom-in"
-              className="progress flex items-center h-[100%] justify-end md:justify-center"
-            >
-              <div className="flex flex-col gap-6 w-3/4 my-5 md:w-[90%]">
-                <ProgressBar logo={<IoLogoPython />} name={"Python"} value={60} />
-                <ProgressBar
-                  logo={<FaMicrosoft />}
-                  name={"Excel"}
-                  value={95}
-                />
-                <ProgressBar
-                  logo={<SiPowerbi />}
-                  name={"Power BI"}
-                  value={88}
-                />
-                <ProgressBar
-                  logo={<FaDatabase />}
-                  name={"SQL Server"}
-                  value={85}
-                />
-                <ProgressBar
-                  logo={<SiMysql />}
-                  name={"MySQL"}
-                  value={70}
-                />
-                <ProgressBar
-                  logo={<SiPostgresql />}
-                  name={"PostgreSQL"}
-                  value={70}
-                />
-              </div>
-            </div>
+    <div id="skills" className="container mx-auto mt-16 p-6">
+      {/* Heading */}
+      <div className="relative mb-10 text-center">
+        <h3 className="text-3xl font-black text-gray-700 sm:text-2xl">My Skills</h3>
+        <span className="h-[2px] w-[80px] bg-gray-400 block mx-auto mt-2"></span>
+      </div>
+
+      {/* Skills Grid */}
+      <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 justify-items-center">
+        {skills.map((skill, index) => (
+          <div key={index} className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md w-32 h-32 hover:shadow-lg transition">
+            <div className="text-4xl text-blue-600">{skill.icon}</div>
+            <p className="mt-2 text-gray-700 font-semibold">{skill.name}</p>
           </div>
-          {/* Right Section */}
-          <div className="right relative flex-1 flex flex-wrap p-5 gap-10 items-center justify-center sm:w-full">
-            <div className="first2 flex flex-col gap-10">
-              <SkillBox
-                logo={<FaDatabase />}
-                black={"white"}
-                white={"black"}
-                skill={"SQL Server"}
-              />
-              <SkillBox
-                logo={<SiMysql />}
-                black={"white"}
-                white={"black"}
-                skill={"MySQL"}
-              />
-            </div>
-            <div className="last2 flex flex-col gap-10">
-              <SkillBox
-                logo={<SiPowerbi />}
-                black={"black"}
-                white={"white"}
-                skill={"Power BI"}
-              />
-              <SkillBox
-                logo={<FaMicrosoft />}
-                black={"black"}
-                white={"white"}
-                skill={"Excel"}
-              />
-            </div>
+        ))}
+      </div>
+
+      {/* Soft Skills Section */}
+      <div className="relative mt-16 text-center">
+        <h3 className="text-2xl font-black text-gray-700">Soft Skills</h3>
+        <span className="h-[2px] w-[60px] bg-gray-400 block mx-auto mt-2"></span>
+      </div>
+
+      {/* Soft Skills Grid */}
+      <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 justify-items-center mt-6">
+        {softSkills.map((skill, index) => (
+          <div key={index} className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md w-32 h-32 hover:shadow-lg transition">
+            <div className="text-4xl text-yellow-500">{skill.icon}</div>
+            <p className="mt-2 text-gray-700 font-semibold">{skill.name}</p>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
